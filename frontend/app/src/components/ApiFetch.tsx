@@ -8,7 +8,6 @@ const ApiFetch = () => {
         try{
             const a = await fetch("http://localhost:8000")
             const b = await a.json()
-            // setResponse(b)
         } catch (err) {
             console.log(err)
         }

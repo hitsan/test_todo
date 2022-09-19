@@ -27,10 +27,10 @@ async def read_root():
     print("sss")
     return {"Hello": "World!"}
 
-@app.post("/")
-def post_name(test: Test):
-    print(test)
-    return {"Hello": "World!"}
+@app.post("/send_message")
+async def post_name(test: Test):
+    # aa = test["name"]
+    return {"test": test}
 
 
 @app.get("/items/{item_id}")

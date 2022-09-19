@@ -9,9 +9,9 @@ const Letter = () => {
             const requestOptions ={
                 method: 'POST',
                 headers:{'Content-Type': 'application/json'},
-                body: JSON.stringify({name: "hogehoge"})
+                body: JSON.stringify({name: inputValue.current.value})
               }
-            fetch("http://localhost:8000", requestOptions)
+            fetch("http://localhost:8000/send_message", requestOptions)
         }
     }
     return (
